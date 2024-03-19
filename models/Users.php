@@ -19,7 +19,6 @@ class Users extends ActiveRecord implements \yii\web\IdentityInterface
 
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        // Não usamos autenticação baseada em token aqui
         return null;
     }
 

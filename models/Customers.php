@@ -9,7 +9,7 @@ class Customers extends ActiveRecord
 {
     public static function tableName()
     {
-        return 'customers'; // Nome da tabela no banco de dados
+        return 'customers'; 
     }
 
     public function rules()
@@ -17,7 +17,7 @@ class Customers extends ActiveRecord
         return [
             [['name', 'cpf'], 'required'],
             ['cpf', 'unique'],
-            ['cpf', 'string', 'length' => 11], // Validação básica de CPF
+            ['cpf', 'string', 'length' => 11], 
             ['address', 'string'],
             ['number', 'string'],
             ['complement', 'string'],
@@ -25,7 +25,7 @@ class Customers extends ActiveRecord
             ['state', 'string'],            
             ['zip', 'string'],
             ['photo', 'string'],
-            ['gender', 'in', 'range' => ['male', 'female']], // Validação de sexo
+            ['gender', 'in', 'range' => ['male', 'female']], 
             [['active'], 'in', 'range' => ['active', 'inactive']],
         ];
     }
